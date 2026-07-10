@@ -11,4 +11,5 @@ FROM nginx:1.31.2-trixie-perl
 WORKDIR /usr/share/nginx/html
 ADD https://raw.githubusercontent.com/daws-86s/notes/refs/heads/main/session-54.txt index.html
 RUN useradd vinay
+CMD ["nginx", "-g", "daemon off;"]
 USER vinay
