@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stock Dashboard</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#0d1117;
+    color:white;
+}
+
+header{
+    background:#161b22;
+    padding:20px;
+    text-align:center;
+    font-size:32px;
+    font-weight:bold;
+    color:#00d4ff;
+}
+
+.container{
+    width:90%;
+    margin:auto;
+    margin-top:30px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#1c2128;
+    border-radius:12px;
+    padding:20px;
+    box-shadow:0 0 12px rgba(0,0,0,.4);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.symbol{
+    font-size:26px;
+    font-weight:bold;
+}
+
+.price{
+    font-size:34px;
+    margin-top:15px;
+}
+
+.green{
+    color:#00ff88;
+}
+
+.red{
+    color:#ff5252;
+}
+
+.watchlist{
+    margin-top:40px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+}
+
+th{
+    background:#00d4ff;
+    color:black;
+    padding:15px;
+}
+
+td{
+    padding:15px;
+    text-align:center;
+    border-bottom:1px solid #333;
+}
+
+tr:hover{
+    background:#24292f;
+}
+
+footer{
+    margin-top:40px;
+    text-align:center;
+    padding:20px;
+    background:#161b22;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+📈 Vinay's Stock Dashboard
+</header>
+
+<div class="container">
+
+<div class="cards">
+
+<div class="card">
+<div class="symbol">NIFTY 50</div>
+<div class="price green">25,420 ▲</div>
+</div>
+
+<div class="card">
+<div class="symbol">BANK NIFTY</div>
+<div class="price green">58,210 ▲</div>
+</div>
+
+<div class="card">
+<div class="symbol">RELIANCE</div>
+<div class="price red">₹1,475 ▼</div>
+</div>
+
+<div class="card">
+<div class="symbol">TCS</div>
+<div class="price green">₹3,950 ▲</div>
+</div>
+
+</div>
+
+<div class="watchlist">
+
+<h2>Today's Watchlist</h2>
+
+<table>
+
+<tr>
+<th>Stock</th>
+<th>Sector</th>
+<th>Status</th>
+<th>Setup</th>
+</tr>
+
+<tr>
+<td>RELIANCE</td>
+<td>Oil & Gas</td>
+<td class="green">Bullish</td>
+<td>Opening High Breakout</td>
+</tr>
+
+<tr>
+<td>TCS</td>
+<td>IT</td>
+<td class="green">Bullish</td>
+<td>Big Candle</td>
+</tr>
+
+<tr>
+<td>HDFCBANK</td>
+<td>Bank</td>
+<td class="red">Bearish</td>
+<td>Breakdown</td>
+</tr>
+
+<tr>
+<td>TATA MOTORS</td>
+<td>Auto</td>
+<td class="green">Bullish</td>
+<td>Volume Breakout</td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+<footer>
+Made with ❤️ using Docker + Nginx
+</footer>
+
+</body>
+</html>
